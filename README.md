@@ -36,3 +36,6 @@ At the end of the code, the number of removed images (i) is printed, along with 
 *	Benchmarking: Regularly benchmark and evaluate the dataset's performance in real-world applications. This helps identify areas for improvement and guides future data collection efforts. 
 *	Collaboration: Collaborate with other institutions or researchers to combine datasets and leverage collective knowledge for more comprehensive data collection.
 
+##	Any other comments about your solution?
+*	Runtime Complexity: The dominant operations inside the loop are reading the images, preprocessing, and dictionary operations. Since we assumed that most operations are constant-time, the overall complexity of the loop is approximately O(n), where n is the number of images in image_files. 
+*	Space Complexity: The space complexity of the code is mainly determined by the data stored in dictionaries (myHashMap and myShapeMap). We can understand that the number of unique keys in the dictionaries is smaller than the total number of images, the space complexity can be approximated as O(m), where m is the number of unique keys in the dictionaries.
