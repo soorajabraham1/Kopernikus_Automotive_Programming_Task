@@ -1,8 +1,10 @@
 # Kopernikus_Automotive_Programming_Task
 ## What did you learn after looking on our dataset?
+
 The dataset has different images of parking areas with vehicles and without them. Dataset has images of different lighting conditions.
 
-##How does you program work?
+## How does you program work?
+
 Every images are compared with same reference image
 Two hashmaps are created. 
 myShapeMap: A dictionary used to store reference images based on their shapes. since there are images of different shapes, we store an image as reference for each shapes.
