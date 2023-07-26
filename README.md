@@ -23,8 +23,8 @@ At the end of the code, the number of removed images (i) is printed, along with 
 
 ## What values did you decide to use for input parameters and how did you find these values?
 
-The input parameter that was used is gaussian_blur_radius_list = [15, 17, 25]. It was obtained by trial and error method. At this configuration, better detection of duplicate images is obtained.
-The min_contour_area is selected as 2150 so that unwanted noises and high-exposure lights are removed.
+* The input parameter that was used is gaussian_blur_radius_list = [15, 17, 25]. It was obtained by trial and error method. At this configuration, better detection of duplicate images is obtained.
+* The min_contour_area is selected as 2150 so that unwanted noises and high-exposure lights are removed.
 
 ## What you would suggest to implement to improve data collection of unique cases in the future?
 
