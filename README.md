@@ -7,8 +7,9 @@ The dataset has different images of parking areas with vehicles and without them
 
 *	The code begins by initializing two dictionaries, myHashMap and myShapeMap, which will be used to store image information and reference images, respectively.
 *	myHashMap: This dictionary is used to identify duplicate or almost similar images based on their characteristics, including a rounded score, count of contours, and shape. The key is a string in the format "score, count, and shape," where the score is rounded to the nearest multiple of 3000. Images with identical characteristics will have the same key, allowing for efficient duplicate detection.
-•	myShapeMap: This dictionary is employed to store reference images for each unique image shape. If the shape of the current image differs from the shape of the previously processed image, a new reference image is chosen and stored in this dictionary. This ensures that images with different shapes have their respective reference images.
-•	The code then proceeds to process each image in the image_files list, which is obtained using os.listdir() on the specified image_folder.
+*	myShapeMap: This dictionary is employed to store reference images for each unique image shape. If the shape of the current image differs from the shape of the previously processed image, a new reference image is chosen and stored in this dictionary. This ensures that images with different shapes have their respective reference images.
+*	The code then proceeds to process each image in the image_files list, which is obtained using os.listdir() on the specified image_folder.
+*	
 For each image, the following steps are performed:
 1.	The image is loaded using cv2.imread() and stored in the variable curr_image.
 2.	The code checks if the shape of the current image (curr_image.shape) is different from that of the previously processed image (prevImShape). If they are different, a check is made in myShapeMap to see if a reference image with the current shape already exists. If such an image exists, it is used as the reference image (ref_image). If not, the current image is stored as the reference image for its shape.
