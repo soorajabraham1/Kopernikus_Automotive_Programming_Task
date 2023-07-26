@@ -19,7 +19,7 @@ For each image, the following steps are performed:
 1.	The score is rounded to the nearest multiple of 3000 to create the key for the myHashMap dictionary, along with the count of contours and the shape of the current image.
 1.	The key is checked in myHashMap. If it already exists, this indicates that a similar image has been processed before, making the current image a duplicate. The duplicate image is removed using os.remove(). Otherwise, the image is added to myHashMap with the key and the image name.
 Any exceptions that occur during image processing are caught, and relevant error messages are printed.
-At the end of the code, the number of removed images (i) is printed, along with the unique keys present in the myHashMap dictionary, which represent the characteristics of the images used for duplicate detection.s through the input array once and performs constant-time operations for each element. The space complexity is O(n) as well, considering the worst case where all elements are unique and stored in the numSet.
+At the end of the code, the number of removed images (i) is printed, along with the unique keys present in the myHashMap dictionary, which represent the characteristics of the images used for duplicate detection.s through the input array once and performs constant-time operations for each element. The space complexity is O(n) as well, considering the worst case where all elements are unique and stored in the map.
 
 
 ## What values did you decide to use for input parameters and how did you find these values?
