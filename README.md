@@ -9,7 +9,8 @@ The dataset has different images of parking areas with vehicles and without them
 *	myHashMap: This dictionary is used to identify duplicate or almost similar images based on their characteristics, including a rounded score, count of contours, and shape. The key is a string in the format "score, count, and shape," where the score is rounded to the nearest multiple of 3000. Images with identical characteristics will have the same key, allowing for efficient duplicate detection.
 *	myShapeMap: This dictionary is employed to store reference images for each unique image shape. If the shape of the current image differs from the shape of the previously processed image, a new reference image is chosen and stored in this dictionary. This ensures that images with different shapes have their respective reference images.
 *	The code then proceeds to process each image in the image_files list, which is obtained using os.listdir() on the specified image_folder.
-*	
+
+ 
 For each image, the following steps are performed:
 1.	The image is loaded using cv2.imread() and stored in the variable curr_image.
 2.	The code checks if the shape of the current image (curr_image.shape) is different from that of the previously processed image (prevImShape). If they are different, a check is made in myShapeMap to see if a reference image with the current shape already exists. If such an image exists, it is used as the reference image (ref_image). If not, the current image is stored as the reference image for its shape.
@@ -28,10 +29,10 @@ At the end of the code, the number of removed images (i) is printed, along with 
 
 ## What you would suggest to implement to improve data collection of unique cases in the future?
 
-•	Diverse Data Sources: Collect data from diverse sources to ensure a broad representation of scenarios. This could include different cameras, angles, lighting conditions, environments, and demographics.
-•	Data Augmentation: Use data augmentation techniques to generate new samples from existing data. Techniques such as rotation, flipping, scaling, and color adjustments can help increase dataset size and diversity.
-•	 Annotated Data: Collect annotated data to create a ground truth for training machine learning models. Annotation can include object bounding boxes, semantic segmentation masks, or key point annotations.
-•	User Feedback: Encourage users to provide feedback on the dataset. Implement mechanisms for users to flag mislabelled data or suggest additional data categories.
-•	Benchmarking: Regularly benchmark and evaluate the dataset's performance in real-world applications. This helps identify areas for improvement and guides future data collection efforts. 
-•	Collaboration: Collaborate with other institutions or researchers to combine datasets and leverage collective knowledge for more comprehensive data collection.
+*	Diverse Data Sources: Collect data from diverse sources to ensure a broad representation of scenarios. This could include different cameras, angles, lighting conditions, environments, and demographics.
+*	Data Augmentation: Use data augmentation techniques to generate new samples from existing data. Techniques such as rotation, flipping, scaling, and color adjustments can help increase dataset size and diversity.
+*	 Annotated Data: Collect annotated data to create a ground truth for training machine learning models. Annotation can include object bounding boxes, semantic segmentation masks, or key point annotations.
+*	User Feedback: Encourage users to provide feedback on the dataset. Implement mechanisms for users to flag mislabelled data or suggest additional data categories.
+*	Benchmarking: Regularly benchmark and evaluate the dataset's performance in real-world applications. This helps identify areas for improvement and guides future data collection efforts. 
+*	Collaboration: Collaborate with other institutions or researchers to combine datasets and leverage collective knowledge for more comprehensive data collection.
 
