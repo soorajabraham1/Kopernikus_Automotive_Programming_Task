@@ -50,7 +50,6 @@ for images in image_files:
         cv2.destroyAllWindows()  # Close all OpenCV windows
 
 print("removed "+str(i)+" images out of "+ str(len(image_files)))
-print(myHashMap.keys())
 
 
 cv2.waitKey(0)  # Wait until any key is pressed
