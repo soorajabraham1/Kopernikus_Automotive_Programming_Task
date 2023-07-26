@@ -5,10 +5,14 @@ The dataset has different images of parking areas with vehicles and without them
 
 ## How does you program work?
 
-Every images are compared with same reference image
+Every images are compared with same reference image.
+
 Two hashmaps are created. 
+
 myShapeMap: A dictionary used to store reference images based on their shapes. since there are images of different shapes, we store an image as reference for each shapes.
+
 myHashMap: A dictionary that will store the images based on their characteristics (score, count, and shape). The key would be a string with ”score, count, and shape” the score is rounded to nearest hundred.
+
 We initialize a variable called prevImShape to zero.  Each time , when the image is loaded, we check if the shape is equal to that of the reference image used for previous image - prevImShape. If they are different, then we selected current image as the reference image and pass same image  as previous image and next image. As expected the output score, number of contours would be zero. But this doesn’t remove the image. Because. Now we add this image to the myHashMap dictionary with key as (score, count, and shape) and value as the image name.
 For the next image, if the shape is same as the previous image we consider the same previous reference image used. And the output of the ‘compare_frames_change_detection’ function is stored to myHashMap. 
 Each time we check if the key is already present in the myHashMap. If the key is already present, this means that a similar image with the same values were stored. So we can understand that it is the duplicate image and we remove them. This solves the duplication problem. 
