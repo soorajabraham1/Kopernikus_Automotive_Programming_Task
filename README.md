@@ -13,11 +13,11 @@ The dataset has different images of parking areas with vehicles and without them
  
 For each image, the following steps are performed:
 1.	The image is loaded using cv2.imread() and stored in the variable curr_image.
-2.	The code checks if the shape of the current image (curr_image.shape) is different from that of the previously processed image (prevImShape). If they are different, a check is made in myShapeMap to see if a reference image with the current shape already exists. If such an image exists, it is used as the reference image (ref_image). If not, the current image is stored as the reference image for its shape.
-3.	Both the current image and the reference image are preprocessed using the preprocess_image_change_detection() function with specific kernel sizes [3, 5, 9]. The result is stored in image_gray and ref_image_gray, respectively.
-4.	The frames of the reference and current images are compared using the compare_frames_change_detection() function, which returns a score, a list of contours (cnts), and a thresholded frame (thresh).
-5.	The score is rounded to the nearest multiple of 3000 to create the key for the myHashMap dictionary, along with the count of contours and the shape of the current image.
-6.	The key is checked in myHashMap. If it already exists, this indicates that a similar image has been processed before, making the current image a duplicate. The duplicate image is removed using os.remove(). Otherwise, the image is added to myHashMap with the key and the image name.
+1.	The code checks if the shape of the current image (curr_image.shape) is different from that of the previously processed image (prevImShape). If they are different, a check is made in myShapeMap to see if a reference image with the current shape already exists. If such an image exists, it is used as the reference image (ref_image). If not, the current image is stored as the reference image for its shape.
+1.	Both the current image and the reference image are preprocessed using the preprocess_image_change_detection() function with specific kernel sizes [3, 5, 9]. The result is stored in image_gray and ref_image_gray, respectively.
+1.	The frames of the reference and current images are compared using the compare_frames_change_detection() function, which returns a score, a list of contours (cnts), and a thresholded frame (thresh).
+1.	The score is rounded to the nearest multiple of 3000 to create the key for the myHashMap dictionary, along with the count of contours and the shape of the current image.
+1.	The key is checked in myHashMap. If it already exists, this indicates that a similar image has been processed before, making the current image a duplicate. The duplicate image is removed using os.remove(). Otherwise, the image is added to myHashMap with the key and the image name.
 Any exceptions that occur during image processing are caught, and relevant error messages are printed.
 At the end of the code, the number of removed images (i) is printed, along with the unique keys present in the myHashMap dictionary, which represent the characteristics of the images used for duplicate detection.s through the input array once and performs constant-time operations for each element. The space complexity is O(n) as well, considering the worst case where all elements are unique and stored in the numSet.
 
